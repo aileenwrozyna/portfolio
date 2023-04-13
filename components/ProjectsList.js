@@ -7,7 +7,7 @@ function ProjectsList({ projects }) {
     ...projects.map(
       (project) =>
         project.attributes.audio.data &&
-        `${process.env.NEXT_PUBLIC_STRAPI_URL}${project.attributes.audio.data.attributes.url}`
+        `${project.attributes.audio.data.attributes.url}`
     ),
   ];
 
@@ -161,7 +161,7 @@ function ProjectsList({ projects }) {
                       {project.attributes.imagecover.data ? (
                         <img
                           className="card-list__item__inner__front__cover"
-                          src={`${process.env.NEXT_PUBLIC_STRAPI_URL}${project.attributes.imagecover.data.attributes.url}`}
+                          src={`${project.attributes.imagecover.data.attributes.url}`}
                           alt=""
                         />
                       ) : (
