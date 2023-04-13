@@ -35,7 +35,7 @@ function Home({ content }) {
         onClick={handleClick}
       >
         <img
-          src={`http://localhost:1337${homeContent.background.data.attributes.url}`}
+          src={`${homeContent.background.data.attributes.url}`}
           alt=""
           className="landing-page__background"
         />
