@@ -1,0 +1,45 @@
+.profile-card {
+    
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+    padding: 0 20px;
+
+    &__image {
+        max-width: 50%;
+        height: 80vh;
+        object-fit: cover;
+        border-radius: 10px;
+
+    }
+
+    &__description {
+        width: 50%;
+
+        &__title {
+            font-size: 3rem;
+        }
+
+        &__text {
+            padding: 0 !important;
+        }
+    }
+}
+
+/* Phones with larger screens */
+@media only screen and (max-width: 767px) {
+    .profile-card {
+        flex-direction: column;
+
+        &__image {
+            max-width: 100%;
+            height: auto;
+
+            max-height: unset;
+        }
+
+        &__description {
+            width: unset;
+        }
+    }
+}
