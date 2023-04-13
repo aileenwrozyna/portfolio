@@ -9,7 +9,7 @@ function Profile({ content }) {
       <div className="profile-card">
         <img
           className="profile-card__image"
-          src={`content.picture.data.attributes.url`}
+          src={`${content.picture.data.attributes.url}`}
           alt="Photo of Aileen"
         />
         <div className="profile-card__description">
