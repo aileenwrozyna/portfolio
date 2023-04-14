@@ -55,7 +55,7 @@ function Home({ content }) {
 
 export default Home;
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const content = await axios.get(
     `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/homes?populate=*`
   );
