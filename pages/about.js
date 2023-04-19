@@ -1,5 +1,6 @@
 import axios from "axios";
 import Profile from "../components/Profile";
+import Link from "next/link";
 
 function About({ data }) {
 	const dataContent = data.data[0].attributes;
