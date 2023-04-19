@@ -153,7 +153,7 @@ function ProjectsList({ projects }) {
               <React.Fragment key={project.attributes.title + index}>
                 <li
                   className={`card-list__item 
-            ${index === activeIndex ? " card-list__item--active" : ""}`}
+            ${index === activeIndex && audios[index] !== null ? " card-list__item--active" : ""}`}
                   onClick={() => handleClick(index)}
                 >
                   <div className="card-list__item__inner">
