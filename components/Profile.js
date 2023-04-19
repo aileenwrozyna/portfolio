@@ -25,7 +25,7 @@ function Profile({ content }) {
               dangerouslySetInnerHTML={{ __html: htmlContent }}
             ></section>
           )}
-           <Link href="/impressum">Impressum</Link>
+           <Link className="profile-card__description__info" href="/impressum">Impressum</Link>
         </div>
       </div>
     </>
