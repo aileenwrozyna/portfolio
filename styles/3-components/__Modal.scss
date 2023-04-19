@@ -12,6 +12,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow-x: auto;
 
     &__close {
         position: absolute;
@@ -41,7 +42,19 @@
         font-size: 2rem;
         text-decoration: underline;
     }
+    
+    &__podcast {
+        padding-top: 150px;
+    }
 
+}
 
+/* Phones with larger screens */
+@media only screen and (max-width: 500px) {
+    .modal {
+        &__podcast {
+            padding-top: 0;
+        }
+    }
 }
 
