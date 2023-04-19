@@ -6,9 +6,10 @@ function About({ data }) {
 
 	return (
 		<>
-            <div className="wrapper">
-			<Profile content={dataContent} />
-			</div>
+		  <div className="wrapper">
+		    <Profile content={dataContent} />
+                    <Link href="/impressum">Impressum</Link>
+		  </div>
 		</>
 	)
 }
