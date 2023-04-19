@@ -255,6 +255,39 @@ function ProjectsList({ projects }) {
                             src={`https://embed.podcasts.apple.com/de/podcast/${project.attributes.embeddedid}`}
                           ></iframe>
                         )}
+                                            {project.attributes.embedded === "Detektor" && (
+                      <iframe
+                        allow="autoplay"
+                        height="230"
+                        width="100%"
+                        src={`https://detektor.fm/${project.attributes.embeddedid}`}
+                      ></iframe>
+                    )}
+                    {project.attributes.embedded === "Ndr" && (
+                      <iframe
+                        allow="autoplay"
+                        className="modal__video"
+                        src={`https://www.ardmediathek.de/embed/${project.attributes.embeddedid}`}
+                      ></iframe>
+                    )}
+                    {project.attributes.embedded === "Arte" && (
+                      <iframe
+                        className="modal__video"
+                        src={`https://www.arte.tv/player/v7/index.html?json_url=${project.attributes.embeddedid}`}
+                        title="Arte video player"
+                        allowFullScreen
+                      ></iframe>
+                    )}
+                    {project.attributes.embedded === "Other" && (
+                      <a
+                        className="modal__link"
+                        href={project.attributes.embeddedid}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        ➡️ Go to website
+                      </a>
+                    )}
                       </>
                     )}
                     {!project.attributes.embedded && "No content yet"}
