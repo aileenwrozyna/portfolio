@@ -249,8 +249,9 @@ function ProjectsList({ projects }) {
                         )}
                         {project.attributes.embedded === "ApplePodcasts" && (
                           <iframe
+                            className="modal__podcast"
                             allow="autoplay"
-                            height="200"
+                            height="450"
                             width="100%"
                             src={`https://embed.podcasts.apple.com/de/podcast/${project.attributes.embeddedid}`}
                           ></iframe>
