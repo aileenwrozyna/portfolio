@@ -11,7 +11,7 @@ function Portfolio({ projects }) {
     "Hörbuch",
     "Werbung",
     "Podcast",
-    "Voice over",
+    "Voice Over",
     "Imagefilm",
     "Synchron",
   ];
