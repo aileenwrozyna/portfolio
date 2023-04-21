@@ -3,7 +3,7 @@ import MarkdownIt from "markdown-it";
 import Footer from "../components/Footer";
 import Head from "next/head";
 
-function Impressum({ data }) {
+function Contact({ data, footer }) {
   const dataContent = data.data[0].attributes;
 
   const md = new MarkdownIt();
@@ -13,7 +13,7 @@ function Impressum({ data }) {
     <>
       <Head>
         <title>
-          Impressum | Aileen Wrozyna, Sprecherin, Moderatorin & Voice Actress
+          Buchung | Aileen Wrozyna, Sprecherin, Moderatorin & Voice Actress
         </title>
       </Head>
       <main className="main">
@@ -30,21 +30,26 @@ function Impressum({ data }) {
           </section>
         </div>
       </main>
-      <Footer />
+      <Footer text={footer.data[0].attributes.contact} />
     </>
   );
 }
 
-export default Impressum;
+export default Contact;
 
 export async function getServerSideProps() {
   const data = await axios.get(
-    `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/impressums`
+    `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/contacts`
+  );
+
+  const footer = await axios.get(
+    `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/footers`
   );
 
   return {
     props: {
       data: data.data,
+      footer: footer.data,
     },
   };
 }
